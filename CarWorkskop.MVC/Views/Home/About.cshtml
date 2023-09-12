@@ -1,0 +1,22 @@
+﻿@model List<About>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>About section</p>
+
+@foreach(var ab in Model)
+{
+    <p>@ab.Title ----> @ab.Description</p>
+    <ul> 
+        tags: 
+        @foreach(var tag in ab.Tags)
+        {
+            <li>@tag</li>
+        }
+
+    </ul>
+}
