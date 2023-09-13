@@ -5,6 +5,12 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWorkskop.MVC", "CarWorkskop.MVC\CarWorkskop.MVC.csproj", "{89B46DCA-F8AB-40E5-BEF4-895DD3896FE7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWorkShop.Aplication", "CarWorkShop.Aplication\CarWorkShop.Aplication.csproj", "{A37868EB-067E-4A67-A3D6-ED1E82A970B2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWorkShop.Domain", "CarWorkShop.Domain\CarWorkShop.Domain.csproj", "{77082878-6AC6-4920-867C-A9E2380C10F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWorkShop.Infrastructure", "CarWorkShop.Infrastructure\CarWorkShop.Infrastructure.csproj", "{AECF4EEC-97E3-4DB8-A90A-F1A5B66B783E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{89B46DCA-F8AB-40E5-BEF4-895DD3896FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89B46DCA-F8AB-40E5-BEF4-895DD3896FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89B46DCA-F8AB-40E5-BEF4-895DD3896FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A37868EB-067E-4A67-A3D6-ED1E82A970B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A37868EB-067E-4A67-A3D6-ED1E82A970B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A37868EB-067E-4A67-A3D6-ED1E82A970B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A37868EB-067E-4A67-A3D6-ED1E82A970B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77082878-6AC6-4920-867C-A9E2380C10F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77082878-6AC6-4920-867C-A9E2380C10F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77082878-6AC6-4920-867C-A9E2380C10F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77082878-6AC6-4920-867C-A9E2380C10F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AECF4EEC-97E3-4DB8-A90A-F1A5B66B783E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AECF4EEC-97E3-4DB8-A90A-F1A5B66B783E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AECF4EEC-97E3-4DB8-A90A-F1A5B66B783E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AECF4EEC-97E3-4DB8-A90A-F1A5B66B783E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
