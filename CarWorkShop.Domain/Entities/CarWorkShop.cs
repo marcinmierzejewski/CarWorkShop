@@ -8,7 +8,7 @@ namespace CarWorkShop.Domain.Entities
 {
     public class CarWorkShop
     {
-        public required int Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; } = default!;
         public string? Description { get; set; }
         public DateTime CreateAt { get; set; } = DateTime.UtcNow;
