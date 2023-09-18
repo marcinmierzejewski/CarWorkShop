@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWorkshop.MVC", "CarWorkskop.MVC\CarWorkshop.MVC.csproj", "{89B46DCA-F8AB-40E5-BEF4-895DD3896FE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWorkShop.MVC", "CarWorkskop.MVC\CarWorkShop.MVC.csproj", "{89B46DCA-F8AB-40E5-BEF4-895DD3896FE7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWorkShop.Aplication", "CarWorkShop.Aplication\CarWorkShop.Aplication.csproj", "{A37868EB-067E-4A67-A3D6-ED1E82A970B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWorkShop.Application", "CarWorkShop.Aplication\CarWorkShop.Application.csproj", "{A37868EB-067E-4A67-A3D6-ED1E82A970B2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarWorkShop.Domain", "CarWorkShop.Domain\CarWorkShop.Domain.csproj", "{77082878-6AC6-4920-867C-A9E2380C10F4}"
 EndProject

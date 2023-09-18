@@ -1,5 +1,7 @@
-﻿using CarWorkShop.Infrastructure.Persistence;
+﻿using CarWorkShop.Domain.Interfaces;
+using CarWorkShop.Infrastructure.Persistence;
 using CarWorkShop.Infrastructure.Seeders;
+using CarWorkShop.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +21,8 @@ namespace CarWorkShop.Infrastructure.Extensions
                 configuration.GetConnectionString("CarWorkShop")));
 
             services.AddScoped<CarWorkShopSeeder>();
+
+            services.AddScoped<ICarWorkShopRepository, CarWorkShopRepository>();
         }
     }
 }
