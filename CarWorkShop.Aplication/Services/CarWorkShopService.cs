@@ -1,4 +1,6 @@
-﻿using CarWorkShop.Domain.Interfaces;
+﻿using AutoMapper;
+using CarWorkShop.Application.CarWorkShop;
+using CarWorkShop.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +12,20 @@ namespace CarWorkShop.Application.Services
     public class CarWorkShopService : ICarWorkShopService
     {
         private readonly ICarWorkShopRepository _carWorkShopRepository;
+        private readonly IMapper _mapper;
 
-        public CarWorkShopService(ICarWorkShopRepository carWorkShopRepository)
+        public CarWorkShopService(ICarWorkShopRepository carWorkShopRepository, IMapper mapper)
         {
             _carWorkShopRepository = carWorkShopRepository;
+            _mapper = mapper;
         }
 
-        public async Task Create(Domain.Entities.CarWorkShop carWorkshop)
+        public async Task Create(CarWorkShopDto carWorkshopDto)
         {
+            var carWorkshop = _mapper.Map<Domain.Entities.CarWorkShop>(carWorkshopDto);
+
             carWorkshop.EncodeName();
+
             await _carWorkShopRepository.Create(carWorkshop);
 
         }
