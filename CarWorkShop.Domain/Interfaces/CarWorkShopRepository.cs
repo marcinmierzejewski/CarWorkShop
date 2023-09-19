@@ -9,5 +9,6 @@ namespace CarWorkShop.Domain.Interfaces
     public interface ICarWorkShopRepository
     {
         Task Create(Domain.Entities.CarWorkShop carWorkshop);
+        Task<Domain.Entities.CarWorkShop?> GetByName(string name);
     }
 }
