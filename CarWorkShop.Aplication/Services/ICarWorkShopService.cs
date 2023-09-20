@@ -5,5 +5,6 @@ namespace CarWorkShop.Application.Services
     public interface ICarWorkShopService
     {
         Task Create(CarWorkShopDto carWorkshop);
+        Task<IEnumerable<CarWorkShopDto>> GetAll();
     }
 }
