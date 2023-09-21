@@ -11,5 +11,6 @@ namespace CarWorkShop.Domain.Interfaces
         Task Create(Domain.Entities.CarWorkShop carWorkshop);
         Task<Domain.Entities.CarWorkShop?> GetByName(string name);
         Task<IEnumerable<Domain.Entities.CarWorkShop>> GetAll();
+        Task<Domain.Entities.CarWorkShop> GetByEncodedName(string encodedName);
     }
 }
