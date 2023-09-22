@@ -5,11 +5,7 @@ using CarWorkShop.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 
 namespace CarWorkShop.Infrastructure.Extensions
 {
@@ -19,6 +15,9 @@ namespace CarWorkShop.Infrastructure.Extensions
         {
             services.AddDbContext<CarWorkShopDbContext>(options => options.UseSqlServer(
                 configuration.GetConnectionString("CarWorkShop")));
+
+            services.AddDefaultIdentity<IdentityUser>()
+                .AddEntityFrameworkStores<CarWorkShopDbContext>();
 
             services.AddScoped<CarWorkShopSeeder>();
 
