@@ -25,12 +25,12 @@ namespace CarWorkShop.Application.CarWorkShop.Commands.EditCarWorkShop
             var carWorkShop = await _repository.GetByEncodedName(request.EncodedName!);
 
             var user = _userContext.GetCurrentUser();
-            var IsEditable = user != null && carWorkShop.CreatedById == user.Id;
+            var IsEditable = user != null && (carWorkShop.CreatedById == user.Id || user.IsInRole("Mod"));
 
             if (!IsEditable)
             {
                 return Unit.Value;
-            }
+            }            
 
             carWorkShop.Description = request.Description;
             carWorkShop.About = request.About;
