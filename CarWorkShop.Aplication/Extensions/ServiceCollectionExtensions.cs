@@ -1,4 +1,5 @@
-﻿using CarWorkShop.Application.ApplicationUser;
+﻿using AutoMapper;
+using CarWorkShop.Application.ApplicationUser;
 using CarWorkShop.Application.CarWorkShop.Commands.CreateCarWorkShop;
 using CarWorkShop.Application.Mappings;
 using FluentValidation;
@@ -20,7 +21,13 @@ namespace CarWorkShop.Application.Extensions
             services.AddScoped<IUserContext, UserContext>();
             services.AddMediatR(typeof(CreateCarWorkShopCommand));
 
-            services.AddAutoMapper(typeof(CarWorkShopMappingProfile));
+            services.AddScoped(provider => new MapperConfiguration(cfg =>
+            {
+                var scope = provider.CreateScope();
+                var userContext = scope.ServiceProvider.GetRequiredService<IUserContext>();
+                cfg.AddProfile(new CarWorkShopMappingProfile(userContext));
+            }).CreateMapper()
+            );
 
             services.AddValidatorsFromAssemblyContaining<CreateCarWorkShopCommandValidator>()
                 .AddFluentValidationAutoValidation()

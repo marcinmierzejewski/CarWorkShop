@@ -25,10 +25,15 @@ namespace CarWorkShop.Application.CarWorkShop.Commands.CreateCarWorkShop
 
         public async Task<Unit> Handle(CreateCarWorkShopCommand request, CancellationToken cancellationToken)
         {
+            var currentUser = _userContext.GetCurrentUser();
+            if (currentUser == null)
+            {
+                return Unit.Value;
+            }
             var carWorkshop = _mapper.Map<Domain.Entities.CarWorkShop>(request);
             carWorkshop.EncodeName();
 
-            carWorkshop.CreatedById = _userContext.GetCurrentUser().Id;
+            carWorkshop.CreatedById = currentUser.Id;
 
             await _carWorkShopRepository.Create(carWorkshop);
 
