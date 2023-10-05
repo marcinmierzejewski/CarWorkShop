@@ -1,4 +1,6 @@
-﻿@model CarWorkShop.Application.CarWorkShop.Commands.EditCarWorkShop.EditCarWorkShopCommand
+﻿@using System.Runtime.ConstrainedExecution;
+@using CarWorkShop.Application.CarWorkShopService.Commands;
+@model CarWorkShop.Application.CarWorkShop.Commands.EditCarWorkShop.EditCarWorkShopCommand
 
 @{
     ViewData["Title"] = "Edit";
@@ -51,9 +53,12 @@
 </div>
 
 <div>
+    <partial name="_CreateCarWorkShopService" model="new CreateCarWorkShopServiceCommand() { CarWorkShopEncodedName = Model.EncodedName}" />
     <a asp-action="Index" class="btn btn-secondary">Back to List</a>
 </div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script src="~/js/CarWorkShop/Edit.js"></script>
 }

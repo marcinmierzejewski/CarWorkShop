@@ -36,7 +36,7 @@ namespace CarWorkShop.Application.Mappings
 
             CreateMap<CarWorkShopDto, EditCarWorkShopCommand>();
 
-            CreateMap<CarWorkShopServiceDto, Domain.Entities.CarWorkShop>()
+            CreateMap<CarWorkShopServiceDto, Domain.Entities.CarWorkShopService>()
                 .ReverseMap();
         }
     }
